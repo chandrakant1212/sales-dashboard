@@ -9,6 +9,10 @@ A modern, responsive sales dashboard built with Next.js 15, TypeScript, Tailwind
 - 🎨 **Atomic Design**: structured codebase (Atoms, Molecules, Organisms).
 - 🌓 **Dark Mode**: Support for light and dark themes.
 
+## Recent Updates
+- **Hydration Fix**: Implemented deterministic mock data generation to resolve server-client mismatches.
+- **Type Safety**: Enhanced TypeScript definitions for Recharts compatibility.
+
 ## Tech Stack
 - **Framework**: Next.js 15 (App Router)
 - **Styling**: Tailwind CSS, clsx, tailwind-merge

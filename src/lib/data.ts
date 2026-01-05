@@ -2,6 +2,7 @@ export interface SalesData {
     month: string;
     sales: number;
     year: number;
+    [key: string]: string | number;
 }
 
 const MONTHS = [

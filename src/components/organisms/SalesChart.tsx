@@ -39,7 +39,7 @@ export function SalesChart({ data, type, threshold }: SalesChartProps) {
                         cx="50%"
                         cy="50%"
                         labelLine={false}
-                        label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                        label={({ name, percent }: any) => `${name ?? ''} ${((percent ?? 0) * 100).toFixed(0)}%`}
                         outerRadius={150}
                         fill="#8884d8"
                         dataKey="sales"
@@ -50,7 +50,7 @@ export function SalesChart({ data, type, threshold }: SalesChartProps) {
                         ))}
                     </Pie>
                     <Tooltip
-                        formatter={(value: number) => [`$${value.toLocaleString()}`, "Sales"]}
+                        formatter={(value: any) => [`$${value?.toLocaleString()}`, "Sales"]}
                         contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                     />
                     <Legend />
@@ -79,7 +79,7 @@ export function SalesChart({ data, type, threshold }: SalesChartProps) {
                     />
                     <Tooltip
                         contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                        formatter={(value: number) => [`$${value.toLocaleString()}`, "Sales"]}
+                        formatter={(value: any) => [`$${value?.toLocaleString()}`, "Sales"]}
                     />
                     <Legend />
                     <ReferenceLine y={threshold} label="Target" stroke="#EF4444" strokeDasharray="3 3" />
@@ -117,7 +117,7 @@ export function SalesChart({ data, type, threshold }: SalesChartProps) {
                 <Tooltip
                     cursor={{ fill: '#F4F4F5' }}
                     contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                    formatter={(value: number) => [`$${value.toLocaleString()}`, "Sales"]}
+                    formatter={(value: any) => [`$${value?.toLocaleString()}`, "Sales"]}
                 />
                 <Legend />
                 <ReferenceLine y={threshold} label="Target" stroke="#EF4444" strokeDasharray="3 3" />
